@@ -24,6 +24,7 @@ jobs:
         run: flutter pub get
 
       - name: Build APK
+        run: grep -R "registerWith" .
         run: flutter build apk --release
 
       - name: Upload artifact
